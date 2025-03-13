@@ -4,6 +4,11 @@ import 'package:my_portfolio/colors.dart';
 class PricingSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final width=MediaQuery.of(context).size.width;
+    bool isMobile=false;
+    if(width<800){
+      isMobile=true;
+    }
     return Container(
       color: maincolor,
       padding: EdgeInsets.all(40),
@@ -11,7 +16,14 @@ class PricingSection extends StatelessWidget {
         children: [
           Text('Pricing Plans', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold,color: Colors.grey)),
           SizedBox(height: 20),
-          Row(
+          isMobile? Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              _pricingCard('Starter', '\$100', ['1 Page App', 'Basic Support']),
+              _pricingCard('Pro', '\$299', ['Full App', 'Priority Support', '1 Month Free Maintenance']),
+              _pricingCard('Enterprise', '\$699', ['All Features', '24/7 Support', 'Custom Design']),
+            ],
+          ): Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               _pricingCard('Starter', '\$100', ['1 Page App', 'Basic Support']),
