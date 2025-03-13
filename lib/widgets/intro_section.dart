@@ -33,26 +33,26 @@ class IntroSection extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 _introTexts(),
-                Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: InkWell(
-                        onTap: () async {
-                          const url = 'files/cv.pdf';
-                          if (await canLaunchUrl(Uri.parse(url))) {
-                            await launchUrl(Uri.parse(url), mode: LaunchMode.platformDefault);
-                          }
-                        },
-                        child: Container(
-                          padding: EdgeInsets.all(9),
-                          decoration: BoxDecoration(
-                            border: Border.all(),
-                            borderRadius: BorderRadius.circular(10)
-                          ),
-                          //icon: Icon(Icons.download, color: Colors.white),
-                          child: Text("Download CV", style: TextStyle(color: Colors.white)),
-                        ),
-                      ),
-                    ),
+                // Padding(
+                //       padding: const EdgeInsets.all(8.0),
+                //       child: InkWell(
+                //         onTap: () async {
+                //           const url = 'files/cv.pdf';
+                //           if (await canLaunchUrl(Uri.parse(url))) {
+                //             await launchUrl(Uri.parse(url), mode: LaunchMode.platformDefault);
+                //           }
+                //         },
+                //         child: Container(
+                //           padding: EdgeInsets.all(9),
+                //           decoration: BoxDecoration(
+                //             border: Border.all(),
+                //             borderRadius: BorderRadius.circular(10)
+                //           ),
+                //           //icon: Icon(Icons.download, color: Colors.white),
+                //           child: Text("Download CV", style: TextStyle(color: Colors.white)),
+                //         ),
+                //       ),
+                //     ),
               ],
             )
           : Row(
