@@ -5,16 +5,22 @@ class StatsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: maincolor,
+      margin: EdgeInsets.all(5),
+      decoration: BoxDecoration( 
+        color: servicesCardColor,
+        borderRadius: BorderRadius.circular(20)
+        ),
+      
       padding: EdgeInsets.symmetric(vertical: 40, horizontal: 40),
       child: Wrap(
+        direction: Axis.horizontal,
         spacing: 20,
         children: [
           _buildStat(1, '+', 'Years Experience'),
-          
+        
           _buildStat(10, '+', 'Projects Completed'),
           _buildStat(5, '+', 'Happy Clients'),
-          _buildStat(100, '%', 'Client Satisfaction'),
+          _buildStat(90, '%', 'Client Satisfaction'),
         ],
       ),
     );
