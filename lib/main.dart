@@ -117,12 +117,11 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
       AboutMe(key: aboutKey,),
       SkillsSection(key: skillsKey,),
       Text("Services",style: TextStyle(color: Colors.white,fontSize: 30),),
-      isMobile?Container(
-        height: height*2.4,
-        child: ServicesSection(key: servicesKey,),
-      ): Container(
-       height: height*1.6,
-        child:ServicesSection(key: servicesKey)),
+      Flex(
+        direction: Axis.vertical,
+        //height: height*2.4,
+        children: [ServicesSection(key: servicesKey,),]
+      ),
       PortfolioSection(key: projectsKey,),
       SizedBox(height: 10,),
       TestimonialsSection(),

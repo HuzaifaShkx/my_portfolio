@@ -13,6 +13,11 @@ class PortfolioSection extends StatelessWidget {
  PortfolioSection({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final width=MediaQuery.of(context).size.width;
+    bool isMobile=false;
+    if(width<800){
+      isMobile=true;
+    }
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
@@ -21,16 +26,16 @@ class PortfolioSection extends StatelessWidget {
       
       padding: EdgeInsets.all(40),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text('My Work', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold,color: Colors.white)),
+          Center(child: Text('My Work', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold,color: Colors.white))),
           SizedBox(height: 20),
-          Wrap(
-            spacing: 20,
-            runSpacing: 20,
+          isMobile?Column(
+            
             children: projects
                 .map((title) => Container(
-                      width: 250,
+                  margin: EdgeInsets.all(8),
+                      width: width*.8,
                       height: 160,
                       decoration: BoxDecoration(
                         color: servicesCardColor,
@@ -40,7 +45,27 @@ class PortfolioSection extends StatelessWidget {
                       padding: EdgeInsets.all(16),
                       child: Center(
                         child: Text(title,
-                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600,color: textPrimaryHeading)),
+                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600,color: textPrimaryHeading),textAlign: TextAlign.center,),
+                      ),
+                    ))
+                .toList(),
+          ):Wrap(
+            alignment: WrapAlignment.center,
+            spacing: 20,
+            runSpacing: 20,
+            children: projects
+                .map((title) => Container(
+                      width: 300,
+                      height: 160,
+                      decoration: BoxDecoration(
+                        color: servicesCardColor,
+                        borderRadius: BorderRadius.circular(30)
+                      ),
+                      
+                      padding: EdgeInsets.all(16),
+                      child: Center(
+                        child: Text(title,
+                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600,color: textPrimaryHeading),textAlign: TextAlign.center,),
                       ),
                     ))
                 .toList(),

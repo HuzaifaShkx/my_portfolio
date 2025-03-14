@@ -50,7 +50,7 @@ class AboutMe extends StatelessWidget {
                       //   color: Colors.white.withOpacity(0.6),
                       //   borderRadius: BorderRadius.circular(50)
                       // ),
-                      constraints: BoxConstraints(maxWidth: 700),
+                     // constraints: BoxConstraints(maxWidth: 800),
                       child: Text(
                         "A Flutter developer, the modern-day artisan of digital experiences, crafts elegant interfaces and seamless interactions across the canvas of devices. Guided by the harmony of Dart syntax and powered by the Flutter engine, they orchestrate pixels and performance into visual symphonies. Their fingertips sketch fluid gestures, animations, and transitions, breathing soul into static screens and transforming concepts into intuitive journeys.\nWith each widget, they compose responsive masterpieces — adaptable, scalable, and beautifully engineered. Their playground is the widget tree; their brush, declarative UI. They sculpt code that transcends platforms, fusing design with logic in perfect harmony. In this cross-platform atelier, they bridge iOS and Android, web and desktop, with a single codebase and limitless imagination.\nEvery hot reload is a heartbeat in their creative process — rapid, iterative, and expressive. They don the mantle of UX visionary, performance optimizer, and problem solver. Debugging becomes poetry, architecture becomes art, and every line of code whispers functionality with finesse.\nIn this digital realm, the Flutter developer is both engineer and artist — building apps not just for use, but for experience.",
                         style: TextStyle(
