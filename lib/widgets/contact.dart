@@ -7,13 +7,13 @@ import 'package:url_launcher/url_launcher.dart';
 class ContactSection extends StatelessWidget {
   const ContactSection({Key? key}) : super(key: key);
   final String linkedInUrl = 'https://www.linkedin.com/in/huzaifa-yasin-developer/';
- final String email = 'huzaifayasin225@gmail.com';
+ final String email = '';
   final String subject = 'Hello';
   final String body = 'This is a test email from Flutter app.';
 
   Future<void> _sendEmail() async {
     final Uri emailUri = Uri(
-      scheme: 'mailto',
+      scheme: 'huzaifayasin225"gmail.com',
       path: email,
       queryParameters: {
         'subject': subject,
