@@ -70,7 +70,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
     return Scaffold(
       backgroundColor: maincolor,
       appBar: AppBar(
-        
+        iconTheme: IconThemeData(color: textPrimaryHeading),
         backgroundColor: maincolor,
         clipBehavior: Clip.antiAlias,
         toolbarHeight: 100,
@@ -92,8 +92,8 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
         ),
         centerTitle: true,
         elevation: 0,
-         actions:[ ElevatedButton(onPressed: (){},style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(textPrimaryHeading)
-), child: Text("Hire Me"),)]
+//          actions:[ ElevatedButton(onPressed: (){},style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(textPrimaryHeading)
+// ), child: Text("Hire Me"),)]
       ),
       
       drawer: isMobile? Drawer(
@@ -117,9 +117,12 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
       AboutMe(key: aboutKey,),
       SkillsSection(key: skillsKey,),
       Text("Services",style: TextStyle(color: Colors.white,fontSize: 30),),
-      Container(
-        height: height*1.6,
-        child: ServicesSection(key: servicesKey)),
+      isMobile?Container(
+        height: height*2.4,
+        child: ServicesSection(key: servicesKey,),
+      ): Container(
+       height: height*1.6,
+        child:ServicesSection(key: servicesKey)),
       PortfolioSection(key: projectsKey,),
       SizedBox(height: 10,),
       TestimonialsSection(),
