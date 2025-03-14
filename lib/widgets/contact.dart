@@ -2,10 +2,39 @@ import 'package:dev_icons/dev_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_portfolio/colors.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactSection extends StatelessWidget {
   const ContactSection({Key? key}) : super(key: key);
+  final String linkedInUrl = 'https://www.linkedin.com/in/huzaifa-yasin-developer/';
+ final String email = 'huzaifayasin225@gmail.com';
+  final String subject = 'Hello';
+  final String body = 'This is a test email from Flutter app.';
 
+  Future<void> _sendEmail() async {
+    final Uri emailUri = Uri(
+      scheme: 'mailto',
+      path: email,
+      queryParameters: {
+        'subject': subject,
+        'body': body,
+      },
+    );
+
+    if (await canLaunchUrl(emailUri)) {
+      await launchUrl(emailUri);
+    } else {
+      throw 'Could not launch $emailUri';
+    }
+  }
+  Future<void> _launchLinkedInProfile() async {
+    final Uri url = Uri.parse(linkedInUrl);
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url, mode: LaunchMode.externalApplication);
+    } else {
+      throw 'Could not launch $linkedInUrl';
+    }
+  }
   @override
   Widget build(BuildContext context) {
      final width=MediaQuery.of(context).size.width;
@@ -26,7 +55,9 @@ class ContactSection extends StatelessWidget {
                 children: [
                   SvgPicture.asset('assets/icons/gmail-svgrepo-com.svg',width: 48,height: 48,),
                   SizedBox(width: 8,),
-                  Text("huzaifayasin225@gmail.com",style: TextStyle(color: secondaryTextColor),)
+                  TextButton(onPressed: (){
+                    _sendEmail();
+                  },child: Text("huzaifayasin225@gmail.com",style: TextStyle(color: secondaryTextColor),))
                 ],
               
               ),
@@ -36,7 +67,9 @@ class ContactSection extends StatelessWidget {
             children: [
               SvgPicture.asset('assets/icons/linkedin-svgrepo-com.svg',width: 48,height: 48,),
               SizedBox(width: 8,),
-              Text("https://www.linkedin.com/in/huzaifa-yasin-developer",style: TextStyle(color: secondaryTextColor),)
+              TextButton(onPressed: (){
+                _launchLinkedInProfile();
+              },child: Text("https://www.linkedin.com/in/huzaifa-yasin-developer",style: TextStyle(color: secondaryTextColor),))
             ],
           )
             ],
@@ -48,7 +81,9 @@ class ContactSection extends StatelessWidget {
                 children: [
                   SvgPicture.asset('assets/icons/gmail-svgrepo-com.svg',width: 48,height: 48,),
                   SizedBox(width: 8,),
-                  Text("huzaifayasin225@gmail.com",style: TextStyle(color: secondaryTextColor),)
+                  TextButton(onPressed: (){
+                    _sendEmail();
+                  },child: Text("huzaifayasin225@gmail.com",style: TextStyle(color: secondaryTextColor),))
                 ],
               
               ),
@@ -58,7 +93,9 @@ class ContactSection extends StatelessWidget {
             children: [
               SvgPicture.asset('assets/icons/linkedin-svgrepo-com.svg',width: 48,height: 48,),
               SizedBox(width: 8,),
-              Text("https://www.linkedin.com/in/huzaifa-yasin-developer",style: TextStyle(color: secondaryTextColor),)
+              TextButton(onPressed: (){
+                _launchLinkedInProfile();
+              },child: Text("https://www.linkedin.com/in/huzaifa-yasin-developer",style: TextStyle(color: secondaryTextColor),))
             ],
           )
             ],

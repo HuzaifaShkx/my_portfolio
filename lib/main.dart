@@ -125,7 +125,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
       PortfolioSection(key: projectsKey,),
       SizedBox(height: 10,),
       TestimonialsSection(),
-      PricingSection(),
+      // PricingSection(),
       ContactSection(key: contactKey,),
       buildfooter()
     ],
