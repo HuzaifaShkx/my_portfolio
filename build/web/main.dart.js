@@ -65088,7 +65088,7 @@ return A.cd(s,n,B.o,s,s,s,s,s,s,new A.aM(40,50,40,50),s,s,1/0)}}
 A.CP.prototype={
 mo(){var s=0,r=A.R(t.H),q
 var $async$mo=A.S(function(a,b){if(a===1)return A.O(b,r)
-while(true)switch(s){case 0:q=A.P9(null,"huzaifayasin225@gmail.com",A.aE(["subject","Hello","body","This is a test email from Flutter app."],t.N,t.z),"mailto")
+while(true)switch(s){case 0:q=A.P9(null,'huzaifayasin225"gmail.com',A.aE(["subject","Hello","body","This is a test email from Flutter app."],t.N,t.z),'huzaifayasin225"gmail.com')
 s=5
 return A.U(A.adp(q),$async$mo)
 case 5:s=b?2:4
