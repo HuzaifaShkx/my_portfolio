@@ -67,20 +67,7 @@ class AboutMe extends StatelessWidget {
             )
           : Column(
               children: [
-                Text(
-                  "About Me",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontWeight: FontWeight.w800),
-                ),
-                Text(
-                  "Mobile Application Developer - Software Engineer",
-                  style: TextStyle(
-                      color: secondaryTextColor,
-                      fontSize: 24,
-                      fontWeight: FontWeight.w800),
-                ),
+               
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -104,12 +91,32 @@ class AboutMe extends StatelessWidget {
                       //   borderRadius: BorderRadius.circular(50)
                       // ),
                       constraints: BoxConstraints(maxWidth: 700),
-                      child: Text(
-                        abouttext,
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w200,
-                            color: Colors.grey),
+                      child: Column(
+                        children: [
+                           Text(
+                  "About Me",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w800),
+                ),
+                SizedBox(height: 10,),
+                Text(
+                  "Mobile Application Developer - Software Engineer",
+                  style: TextStyle(
+                      color: secondaryTextColor,
+                      fontSize: 24,
+                      fontWeight: FontWeight.w800),
+                ),
+                 SizedBox(height: 10,),
+                          Text(
+                            abouttext,
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w200,
+                                color: Colors.grey),
+                          ),
+                        ],
                       ),
                     ),
                   ],
