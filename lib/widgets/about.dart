@@ -12,14 +12,14 @@ class AboutMe extends StatelessWidget {
     return Container(
       // color: Colors.indigo[100],
       padding: EdgeInsets.symmetric(horizontal: 40, vertical: 50),
-      width: double.infinity,
+      width: MediaQuery.of(context).size.width,
       child: isMobile
           ? Column(
               children: [
                 Text(
                   "About Me",
                   style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.grey,
                       fontSize: 30,
                       fontWeight: FontWeight.w800),
                 ),
@@ -29,10 +29,11 @@ class AboutMe extends StatelessWidget {
                       color: secondaryTextColor,
                       fontSize: 24,
                       fontWeight: FontWeight.w800),
+                      textAlign: TextAlign.center,
                 ),
                 
                     Container(
-                        width: 300,
+                      //  width: MediaQuery.of(context).size.width*0.5,
                         height: 300,
                         alignment: Alignment.center,
                         // decoration: BoxDecoration(
@@ -40,10 +41,10 @@ class AboutMe extends StatelessWidget {
                         //   borderRadius: BorderRadius.circular(50)
                         // ),
 
-                        child: Image.asset('assets/bnw2.jpg')),
+                        child: Image.asset('assets/bnw2.jpg',fit: BoxFit.cover,width: MediaQuery.of(context).size.width*.4,height: MediaQuery.of(context).size.width*.4,alignment: Alignment.center,)),
                     Container(
                       padding: EdgeInsets.all(20),
-                      width: 650,
+                      //width: MediaQuery.of(context).size.width*0.5,
                       // height: 400,
                       alignment: Alignment.center,
                       // decoration: BoxDecoration(
@@ -83,18 +84,18 @@ class AboutMe extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                        width: 300,
-                        height: 300,
+                        width: MediaQuery.of(context).size.width*0.4,
+                        //height: 300,
                         alignment: Alignment.center,
                         // decoration: BoxDecoration(
                         //   color: Colors.white,
                         //   borderRadius: BorderRadius.circular(50)
                         // ),
 
-                        child: Image.asset('assets/bnw2.jpg')),
+                        child: Image.asset('assets/bnw2.jpg',fit: BoxFit.cover,width: MediaQuery.of(context).size.width*.4,height: MediaQuery.of(context).size.width*.4,alignment: Alignment.center,)),
                     Container(
                       padding: EdgeInsets.all(20),
-                      width: 650,
+                      width: MediaQuery.of(context).size.width*0.5,
                       // height: 400,
                       alignment: Alignment.center,
                       // decoration: BoxDecoration(

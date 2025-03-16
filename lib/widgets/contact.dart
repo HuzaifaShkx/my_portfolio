@@ -43,17 +43,18 @@ class ContactSection extends StatelessWidget {
       isMobile=true;
     }
     return Container(
+      padding: EdgeInsets.all(8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text("Contact Me",style: TextStyle(color: Colors.white,fontSize: 24,fontWeight: FontWeight.w700),),
+          Text("Contact Me",style: TextStyle(color: Colors.grey,fontSize: 28,fontWeight: FontWeight.bold),),
           isMobile? Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SvgPicture.asset('assets/icons/gmail-svgrepo-com.svg',width: 48,height: 48,),
+                  SvgPicture.asset('assets/icons/gmail-svgrepo-com.svg',width: 40,height: 40,),
                   SizedBox(width: 8,),
                   TextButton(onPressed: (){
                     _sendEmail();
@@ -65,7 +66,7 @@ class ContactSection extends StatelessWidget {
                Row(
              mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset('assets/icons/linkedin-svgrepo-com.svg',width: 48,height: 48,),
+              SvgPicture.asset('assets/icons/linkedin-svgrepo-com.svg',width: 40,height: 40,),
               SizedBox(width: 8,),
               TextButton(onPressed: (){
                 _launchLinkedInProfile();

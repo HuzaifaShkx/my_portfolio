@@ -38,13 +38,13 @@ Widget build(BuildContext context) {
   final isMobile = MediaQuery.of(context).size.width < 800;
 
   return Container(
-    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 50),
+    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
     width: MediaQuery.of(context).size.width,
     child: isMobile
         ? Column(
             children: services.map((service) {
               return Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
+                padding: const EdgeInsets.symmetric(vertical: 10),
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),

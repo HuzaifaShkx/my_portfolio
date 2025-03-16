@@ -91,7 +91,7 @@ class IntroSection extends StatelessWidget {
                 
                 CircleAvatar(
                   
-                  radius: 150,
+                  radius: 200,
                   backgroundImage: AssetImage('assets/bnw1.jpg'),
                 ),
               ],

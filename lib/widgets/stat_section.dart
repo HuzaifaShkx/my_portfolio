@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/colors.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class StatsSection extends StatelessWidget {
   @override
@@ -13,6 +14,7 @@ class StatsSection extends StatelessWidget {
       
       padding: EdgeInsets.symmetric(vertical: 40, horizontal: 40),
       child: Wrap(
+        alignment: WrapAlignment.center,
         direction: Axis.horizontal,
         spacing: 20,
         children: [
@@ -29,12 +31,19 @@ class StatsSection extends StatelessWidget {
   Widget _buildStat(int targetNumber, String suffix, String label) {
     return Column(
       children: [
-        TweenAnimationBuilder(
-          tween: IntTween(begin: 0, end: targetNumber),
-          duration: Duration(seconds: 2),
-          builder: (context, value, child) => Text(
-            '$value$suffix',
-            style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold,color: textPrimaryHeading),
+        CircularPercentIndicator(
+          animation: true,
+          lineWidth: 8.0,
+          radius: 50,
+          backgroundColor:textPrimaryHeading ,
+          progressColor: textPrimaryHeading,
+          center: TweenAnimationBuilder(
+            tween: IntTween(begin: 0, end: targetNumber),
+            duration: Duration(seconds: 2),
+            builder: (context, value, child) => Text(
+              '$value$suffix',
+              style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold,color: textPrimaryHeading),
+            ),
           ),
         ),
         SizedBox(height: 8),

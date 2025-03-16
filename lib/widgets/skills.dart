@@ -17,6 +17,8 @@ class SkillsSection extends StatelessWidget {
       child: isMobile
           ? Wrap(
             direction: Axis.horizontal,
+            alignment: WrapAlignment.center,
+            spacing: 10,
             children: [
                _buildSkill(
                     SvgPicture.asset(
@@ -24,35 +26,35 @@ class SkillsSection extends StatelessWidget {
                       width: 48,
                       height: 48,
                     ),
-                    "75",'Flutter'),
+                    "75",'Flutter',0.75),
                      _buildSkill(
                     SvgPicture.asset(
                       'assets/icons/dart-svgrepo-com.svg',
                       width: 48,
                       height: 48,
                     ),
-                    "75",'Dart'),
+                    "75",'Dart',0.75),
                     _buildSkill(
                   SvgPicture.asset(
                     'assets/icons/firebase-svgrepo-com.svg',
                     width: 48,
                     height: 48,
                   ),
-                  "50",'Firebase'),
+                  "50",'Firebase',0.50),
                    _buildSkill(
                   SvgPicture.asset(
                     'assets/icons/python-svgrepo-com.svg',
                     width: 48,
                     height: 48,
                   ),
-                  "50",'Python'),
+                  "50",'Python',0.50),
                    _buildSkill(
                   SvgPicture.asset(
                     'assets/icons/sql-svgrepo-com.svg',
                     width: 48,
                     height: 48,
                   ),
-                  "50",'SQL'),
+                  "50",'SQL',0.50),
             ],)
           : Column(
               children: [
@@ -65,35 +67,35 @@ class SkillsSection extends StatelessWidget {
                           width: 48,
                           height: 48,
                         ),
-                        "75",'Flutter'),
+                        "75",'Flutter',0.75),
                          _buildSkill(
                         SvgPicture.asset(
                           'assets/icons/dart-svgrepo-com.svg',
                           width: 48,
                           height: 48,
                         ),
-                        "75",'Dart'),
+                        "75",'Dart',0.75),
                          _buildSkill(
                         SvgPicture.asset(
                           'assets/icons/firebase-svgrepo-com.svg',
                           width: 48,
                           height: 48,
                         ),
-                        "50",'Firebase'),
+                        "50",'Firebase',0.50),
                          _buildSkill(
                         SvgPicture.asset(
                           'assets/icons/python-svgrepo-com.svg',
                           width: 48,
                           height: 48,
                         ),
-                        "50",'Python'),
+                        "50",'Python',0.50),
                         _buildSkill(
                         SvgPicture.asset(
                           'assets/icons/sql-svgrepo-com.svg',
                           width: 48,
                           height: 48,
                         ),
-                        "50",'SQL'),
+                        "50",'SQL',0.50),
                         
                     
                   ],
@@ -103,16 +105,17 @@ class SkillsSection extends StatelessWidget {
     );
   }
 
-  Widget _buildSkill(Widget svg, String per,String skill) {
+  Widget _buildSkill(Widget svg, String per,String skill,double percent) {
     return CircularPercentIndicator(
+      
       radius: 50.0,
       lineWidth: 8.0,
-      percent: 0.75, // 75%
+      percent: percent, // 75%
       header: Text("${skill}",style: TextStyle(color: Colors.grey,fontSize: 22),),
       footer: Text("${per}%",style: TextStyle(color: textPrimaryHeading,fontSize: 18),),
       center: svg,
       progressColor: textPrimaryHeading,
-      backgroundColor: Colors.grey,
+      backgroundColor: secondaryTextColor,
       animation: true,
       circularStrokeCap: CircularStrokeCap.round,
     );

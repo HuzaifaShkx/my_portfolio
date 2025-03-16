@@ -28,7 +28,7 @@ class PortfolioSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Center(child: Text('My Work', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold,color: Colors.white))),
+          Center(child: Text('My Work', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold,color: Colors.grey))),
           SizedBox(height: 20),
           isMobile?Column(
             
