@@ -78,13 +78,18 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
         //title: HeaderMarqueeText(text: '🚀 Flutter Developer  • Available for Freelance Work',textColor: Colors.black,),
         title: Padding(
           padding: const EdgeInsets.only(left:70.0,right: 70),
-          child:  isMobile?Container(): Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                
-              ],
+          child:  isMobile?CircleAvatar(
+              radius: 30,
+              backgroundImage: AssetImage('assets/logo.png',),
+            ):
+          Align(
+            alignment: Alignment.bottomLeft,
+            child: CircleAvatar(
+              radius: 30,
+              backgroundImage: AssetImage('assets/logo.png',),
             ),
+          ),
+          
         ),
         centerTitle: true,
         elevation: 0,
