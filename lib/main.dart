@@ -94,7 +94,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
                 _navButton(context, 'Projects', projectsKey),
                 _navButton(context, 'Contact', contactKey),
                 ],
-                leading: !isMobile?null:Icon(Icons.menu),
+              //  leading: !isMobile?null:Icon(Icons.menu),
       ),
       
       // drawer: isMobile? Drawer(
