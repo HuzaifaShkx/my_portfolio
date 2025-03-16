@@ -4,8 +4,9 @@ import 'package:my_portfolio/colors.dart';
 import 'package:dev_icons/dev_icons.dart';
 
 class AboutMe extends StatelessWidget {
-  const AboutMe({Key? key}) : super(key: key);
+  AboutMe({Key? key}) : super(key: key);
 
+  String abouttext='A Flutter developer is a modern artisan, crafting elegant interfaces and seamless interactions across devices. Guided by Dart and powered by the Flutter engine, they transform static screens into intuitive, animated journeys.\nWith each widget, they build responsive, scalable masterpieces — blending design and logic in harmony. Their canvas is the widget tree; their brush, declarative UI. From mobile to desktop, a single codebase bridges platforms with creativity.\nEvery hot reload fuels their process — fast, expressive, and iterative. Equal parts engineer and artist, the Flutter developer turns code into experience, where performance meets visual storytelling.';
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 800;
@@ -53,7 +54,7 @@ class AboutMe extends StatelessWidget {
                       // ),
                      // constraints: BoxConstraints(maxWidth: 800),
                       child: Text(
-                        "A Flutter developer, the modern-day artisan of digital experiences, crafts elegant interfaces and seamless interactions across the canvas of devices. Guided by the harmony of Dart syntax and powered by the Flutter engine, they orchestrate pixels and performance into visual symphonies. Their fingertips sketch fluid gestures, animations, and transitions, breathing soul into static screens and transforming concepts into intuitive journeys.\nWith each widget, they compose responsive masterpieces — adaptable, scalable, and beautifully engineered. Their playground is the widget tree; their brush, declarative UI. They sculpt code that transcends platforms, fusing design with logic in perfect harmony. In this cross-platform atelier, they bridge iOS and Android, web and desktop, with a single codebase and limitless imagination.\nEvery hot reload is a heartbeat in their creative process — rapid, iterative, and expressive. They don the mantle of UX visionary, performance optimizer, and problem solver. Debugging becomes poetry, architecture becomes art, and every line of code whispers functionality with finesse.\nIn this digital realm, the Flutter developer is both engineer and artist — building apps not just for use, but for experience.",
+                        abouttext,
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w200,
@@ -104,7 +105,7 @@ class AboutMe extends StatelessWidget {
                       // ),
                       constraints: BoxConstraints(maxWidth: 700),
                       child: Text(
-                        "A Flutter developer, the modern-day artisan of digital experiences, crafts elegant interfaces and seamless interactions across the canvas of devices. Guided by the harmony of Dart syntax and powered by the Flutter engine, they orchestrate pixels and performance into visual symphonies. Their fingertips sketch fluid gestures, animations, and transitions, breathing soul into static screens and transforming concepts into intuitive journeys.\nWith each widget, they compose responsive masterpieces — adaptable, scalable, and beautifully engineered. Their playground is the widget tree; their brush, declarative UI. They sculpt code that transcends platforms, fusing design with logic in perfect harmony. In this cross-platform atelier, they bridge iOS and Android, web and desktop, with a single codebase and limitless imagination.\nEvery hot reload is a heartbeat in their creative process — rapid, iterative, and expressive. They don the mantle of UX visionary, performance optimizer, and problem solver. Debugging becomes poetry, architecture becomes art, and every line of code whispers functionality with finesse.\nIn this digital realm, the Flutter developer is both engineer and artist — building apps not just for use, but for experience.",
+                        abouttext,
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w200,

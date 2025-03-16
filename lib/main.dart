@@ -82,32 +82,34 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               mainAxisSize: MainAxisSize.max,
               children: [
-                _navButton(context, 'Home', homeKey),
-                _navButton(context, 'About', aboutKey),
-                 _navButton(context, 'Services', servicesKey),
-                _navButton(context, 'Projects', projectsKey),
-                _navButton(context, 'Contact', contactKey),
+                
               ],
             ),
         ),
         centerTitle: true,
         elevation: 0,
-//          actions:[ ElevatedButton(onPressed: (){},style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(textPrimaryHeading)
-// ), child: Text("Hire Me"),)]
-      ),
-      
-      drawer: isMobile? Drawer(
-        backgroundColor: maincolor,
-        child: Column(
-          children: [
-            _navButton(context, 'Home', homeKey),
+         actions:[ _navButton(context, 'Home', homeKey),
                 _navButton(context, 'About', aboutKey),
                  _navButton(context, 'Services', servicesKey),
                 _navButton(context, 'Projects', projectsKey),
                 _navButton(context, 'Contact', contactKey),
-          ],
-        ),
-      ):Container(),
+                ],
+                leading: !isMobile?null:Icon(Icons.menu),
+      ),
+      
+      // drawer: isMobile? Drawer(
+      //   backgroundColor: maincolor,
+      //   child: Column(
+      //     children: [
+      //       _navButton(context, 'Home', homeKey),
+      //           _navButton(context, 'About', aboutKey),
+      //            _navButton(context, 'Services', servicesKey),
+      //           _navButton(context, 'Projects', projectsKey),
+      //           _navButton(context, 'Contact', contactKey),
+      //     ],
+      //   ),
+      // ):Container(),
+      
       body: SingleChildScrollView(
   child: Column(
     children: [
