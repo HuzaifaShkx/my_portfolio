@@ -7,6 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 class ContactSection extends StatelessWidget {
   const ContactSection({Key? key}) : super(key: key);
   final String linkedInUrl = 'https://www.linkedin.com/in/huzaifa-yasin-developer/';
+  final String githubUrl='https://github.com/HuzaifaShkx'; 
  final String email = 'huzaifayasin225"gmail.com';
   final String subject = 'Hello';
   final String body = 'This is a test email from Flutter app.';
@@ -35,6 +36,14 @@ class ContactSection extends StatelessWidget {
       throw 'Could not launch $linkedInUrl';
     }
   }
+  Future<void> _launchGithubProfile() async {
+    final Uri url = Uri.parse(githubUrl);
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url, mode: LaunchMode.externalApplication);
+    } else {
+      throw 'Could not launch $linkedInUrl';
+    }
+  }
   @override
   Widget build(BuildContext context) {
      final width=MediaQuery.of(context).size.width;
@@ -47,7 +56,7 @@ class ContactSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text("Contact Me",style: TextStyle(color: Colors.grey,fontSize: 28,fontWeight: FontWeight.bold),),
+          Text("Socials",style: TextStyle(color: Colors.grey,fontSize: 28,fontWeight: FontWeight.bold),),
           isMobile? Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -72,10 +81,21 @@ class ContactSection extends StatelessWidget {
                 _launchLinkedInProfile();
               },child: Text("https://www.linkedin.com/in/huzaifa-yasin-developer",style: TextStyle(color: secondaryTextColor),))
             ],
+          ),
+          Row(
+             mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(DevIcons.githubOriginal,size: 40,),
+              SizedBox(width: 8,),
+              TextButton(onPressed: (){
+                _launchGithubProfile();
+              },child: Text("https://github.com/HuzaifaShkx",style: TextStyle(color: secondaryTextColor),))
+            ],
           )
             ],
-          ):Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          ):Wrap(
+            direction: Axis.horizontal,
+            alignment: WrapAlignment.center,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -97,6 +117,17 @@ class ContactSection extends StatelessWidget {
               TextButton(onPressed: (){
                 _launchLinkedInProfile();
               },child: Text("https://www.linkedin.com/in/huzaifa-yasin-developer",style: TextStyle(color: secondaryTextColor),))
+            ],
+          ),
+          SizedBox(width: 8,),
+           Row(
+             mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(DevIcons.githubOriginal,size: 40,),
+              SizedBox(width: 8,),
+              TextButton(onPressed: (){
+                _launchGithubProfile();
+              },child: Text("https://github.com/HuzaifaShkx",style: TextStyle(color: secondaryTextColor),))
             ],
           )
             ],
