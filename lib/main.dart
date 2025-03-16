@@ -97,19 +97,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
               //  leading: !isMobile?null:Icon(Icons.menu),
       ),
       
-      // drawer: isMobile? Drawer(
-      //   backgroundColor: maincolor,
-      //   child: Column(
-      //     children: [
-      //       _navButton(context, 'Home', homeKey),
-      //           _navButton(context, 'About', aboutKey),
-      //            _navButton(context, 'Services', servicesKey),
-      //           _navButton(context, 'Projects', projectsKey),
-      //           _navButton(context, 'Contact', contactKey),
-      //     ],
-      //   ),
-      // ):Container(),
-      
+     
       body: SingleChildScrollView(
   child: Column(
     children: [
