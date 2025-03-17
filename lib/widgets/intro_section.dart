@@ -90,7 +90,7 @@ class IntroSection extends StatelessWidget {
                 ),
                 
                 CircleAvatar(
-                  
+                  //new commit try
                   radius: 200,
                   backgroundImage: AssetImage('assets/bnw1.jpg'),
                 ),
