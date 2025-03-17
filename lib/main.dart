@@ -76,21 +76,21 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
         toolbarHeight: 100,
         flexibleSpace: HeaderMarqueeText(text: '🚀 Flutter Developer  • Available for Freelance Work',textColor: textPrimaryHeading,),
         //title: HeaderMarqueeText(text: '🚀 Flutter Developer  • Available for Freelance Work',textColor: Colors.black,),
-        title: Padding(
-          padding: const EdgeInsets.only(left:70.0,right: 70),
-          child:  isMobile?CircleAvatar(
-              radius: 30,
-              backgroundImage: AssetImage('assets/logo.png',),
-            ):
-          Align(
-            alignment: Alignment.bottomLeft,
-            child: CircleAvatar(
-              radius: 30,
-              backgroundImage: AssetImage('assets/logo.png',),
-            ),
-          ),
+        // title: Padding(
+        //   padding: const EdgeInsets.only(left:70.0,right: 70),
+        //   child:  isMobile?CircleAvatar(
+        //       radius: 30,
+        //       backgroundImage: AssetImage('assets/logo.png',),
+        //     ):
+        //   Align(
+        //     alignment: Alignment.bottomLeft,
+        //     child: CircleAvatar(
+        //       radius: 30,
+        //       backgroundImage: AssetImage('assets/logo.png',),
+        //     ),
+        //   ),
           
-        ),
+        // ),
         centerTitle: true,
         elevation: 0,
          actions:[ _navButton(context, 'Home', homeKey),
