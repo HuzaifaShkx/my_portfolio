@@ -64731,7 +64731,7 @@ A.DR.prototype={
 L(a){var s=null,r=A.bk(s,s,this.f,s,s,s,s,s,s,s,s,16,s,s,B.a1,s,s,!0,s,s,s,s,s,s,s,s),q=A.bE(0,0,1),p=A.bE(0,0,1),o=A.bE(0,500,0)
 return A.cy(new A.pk(this.c,r,B.al,50,50,q,10,p,A.alJ(B.S),o,A.alJ(B.kf),s),30,s)}}
 A.Ed.prototype={
-L(a){var s=null,r="assets/bnw3.jpg",q=t.E
+L(a){var s=null,r="assets/bnw1.jpg",q=t.E
 q=A.br(a,s,t.w).w.a.a<800?A.dq(A.a([A.Sk(new A.iQ(r,s,s),80),A.cy(s,20,s),this.G4()],q),B.w,B.M,B.H):A.jA(A.a([A.dq(A.a([this.G4()],q),B.w,B.M,B.H),A.Sk(new A.iQ(r,s,s),200)],q),B.w,B.hn,B.H)
 return A.cm(s,q,B.o,s,s,s,s,s,s,new A.aI(40,50,40,50),s,s,1/0)},
 G4(){var s,r=null,q=A.bQ("Hi, I'm ",A.bk(r,r,$.k4(),r,r,r,r,r,r,r,r,20,r,r,B.ao,r,r,!0,r,r,r,r,r,r,r,r),r,r),p=A.bQ("Huzaifa Yasin \ud83d\udc4b",A.bk(r,r,new A.p(4288124823),r,r,r,r,r,r,r,r,32,r,r,B.ao,r,r,!0,r,r,r,r,r,r,r,r),r,r),o=A.cy(r,10,r),n=$.iM(),m=A.bk(r,r,n,r,r,r,r,r,r,r,r,40,r,r,B.ao,r,r,!0,r,r,r,r,r,r,r,r)

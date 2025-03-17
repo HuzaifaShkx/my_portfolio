@@ -29,7 +29,7 @@ class IntroSection extends StatelessWidget {
                 CircleAvatar(
                   
                   radius: 80,
-                  backgroundImage: AssetImage('assets/bnw3.jpg'),
+                  backgroundImage: AssetImage('assets/bnw1.jpg'),
                 ),
                 SizedBox(height: 20),
                 _introTexts(),
@@ -92,7 +92,7 @@ class IntroSection extends StatelessWidget {
                 CircleAvatar(
                   //new commit try
                   radius: 200,
-                  backgroundImage: AssetImage('assets/bnw3.jpg'),
+                  backgroundImage: AssetImage('assets/bnw1.jpg'),
                 ),
               ],
             ),
