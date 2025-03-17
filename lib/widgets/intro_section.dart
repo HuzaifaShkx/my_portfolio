@@ -29,7 +29,7 @@ class IntroSection extends StatelessWidget {
                 CircleAvatar(
                   
                   radius: 80,
-                  backgroundImage: AssetImage('assets/bnw1.jpg'),
+                  backgroundImage: AssetImage('assets/bnw3.jpg'),
                 ),
                 SizedBox(height: 20),
                 _introTexts(),
@@ -92,7 +92,7 @@ class IntroSection extends StatelessWidget {
                 CircleAvatar(
                   
                   radius: 200,
-                  backgroundImage: AssetImage('assets/bnw1.jpg'),
+                  backgroundImage: AssetImage('assets/bnw3.jpg'),
                 ),
               ],
             ),
@@ -112,26 +112,29 @@ class IntroSection extends StatelessWidget {
           style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold,color: Color(0xff979797)),
         ),
         SizedBox(height: 10),
-        AnimatedTextKit(
-          animatedTexts: [
-            TypewriterAnimatedText(
-              'Flutter Developer',
-              textStyle: TextStyle(fontSize: 40, color:textPrimaryHeading,fontWeight: FontWeight.bold ),
-              speed: Duration(milliseconds: 100),
-            ),
-            TypewriterAnimatedText(
-              'Mobile & Web Specialist',
-              textStyle: TextStyle(fontSize: 40, color: textPrimaryHeading,fontWeight: FontWeight.bold),
-              speed: Duration(milliseconds: 100),
-            ),
-            TypewriterAnimatedText(
-              'Clean & Responsive UI Designer',
-              textStyle: TextStyle(fontSize: 40, color: textPrimaryHeading,fontWeight: FontWeight.bold),
-              speed: Duration(milliseconds: 100),
-            ),
-          ],
-          repeatForever: true,
-          pause: Duration(milliseconds: 1500),
+        Container(
+          height: 150,
+          child: AnimatedTextKit(
+            animatedTexts: [
+              TypewriterAnimatedText(
+                'Flutter Developer',
+                textStyle: TextStyle(fontSize: 40, color:textPrimaryHeading,fontWeight: FontWeight.bold ),
+                speed: Duration(milliseconds: 100),
+              ),
+              TypewriterAnimatedText(
+                'Mobile & Web Specialist',
+                textStyle: TextStyle(fontSize: 40, color: textPrimaryHeading,fontWeight: FontWeight.bold),
+                speed: Duration(milliseconds: 100),
+              ),
+              TypewriterAnimatedText(
+                'Clean & Responsive UI Designer',
+                textStyle: TextStyle(fontSize: 40, color: textPrimaryHeading,fontWeight: FontWeight.bold),
+                speed: Duration(milliseconds: 100),
+              ),
+            ],
+            repeatForever: true,
+            pause: Duration(milliseconds: 1500),
+          ),
         ),
       ],
     );

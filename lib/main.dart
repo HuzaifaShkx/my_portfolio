@@ -22,7 +22,7 @@ class PortfolioWebsite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'My Portfolio',
+      title: 'Huzaifa Yasin-Flutter Dev',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
       home: PortfolioHomePage(),
