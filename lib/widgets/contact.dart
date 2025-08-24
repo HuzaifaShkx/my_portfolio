@@ -56,12 +56,13 @@ class ContactSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text("Socials",style: TextStyle(color: Colors.grey,fontSize: 28,fontWeight: FontWeight.bold),),
+          Text("Socials",style: TextStyle(color: Colors.black,fontSize: 28,fontWeight: FontWeight.bold),),
           isMobile? Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SvgPicture.asset('assets/icons/gmail-svgrepo-com.svg',width: 40,height: 40,),
                   SizedBox(width: 8,),
@@ -73,7 +74,7 @@ class ContactSection extends StatelessWidget {
               ),
               SizedBox(width: 8,),
                Row(
-             mainAxisAlignment: MainAxisAlignment.center,
+             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SvgPicture.asset('assets/icons/linkedin-svgrepo-com.svg',width: 40,height: 40,),
               SizedBox(width: 8,),
@@ -83,7 +84,7 @@ class ContactSection extends StatelessWidget {
             ],
           ),
           Row(
-             mainAxisAlignment: MainAxisAlignment.center,
+             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Icon(DevIcons.githubOriginal,size: 40,),
               SizedBox(width: 8,),
@@ -94,11 +95,11 @@ class ContactSection extends StatelessWidget {
           )
             ],
           ):Wrap(
-            direction: Axis.horizontal,
+            direction: Axis.vertical,
             alignment: WrapAlignment.center,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SvgPicture.asset('assets/icons/gmail-svgrepo-com.svg',width: 48,height: 48,),
                   SizedBox(width: 8,),
@@ -110,7 +111,7 @@ class ContactSection extends StatelessWidget {
               ),
               SizedBox(width: 8,),
                Row(
-             mainAxisAlignment: MainAxisAlignment.center,
+             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SvgPicture.asset('assets/icons/linkedin-svgrepo-com.svg',width: 48,height: 48,),
               SizedBox(width: 8,),
@@ -121,7 +122,7 @@ class ContactSection extends StatelessWidget {
           ),
           SizedBox(width: 8,),
            Row(
-             mainAxisAlignment: MainAxisAlignment.center,
+             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Icon(DevIcons.githubOriginal,size: 40,),
               SizedBox(width: 8,),
